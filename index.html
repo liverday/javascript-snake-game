@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         * {
@@ -11,11 +13,50 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: lime;
+            font-family: 'Roboto', helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-flow: column nowrap;
+            align-items: center;
+            height: 100%;
+        }
+
+        .container canvas {
+            border: 5px solid white;
+        } 
+
+        .container header {
+            width: 625px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .container header h1 {
+            margin: 0;
+        }
     </style>
 </head>
 
 <body>
-    <canvas id="canvas" width="400" height="400"></canvas>
-    <script type="text/javascript" src="./index.js"></script>
+    <div class="container">
+        <header>
+            <h1>Snake </h1>
+            <h1><span>Score: </span><span id="score">0</span></h1>
+        </header>   
+        <canvas id="canvas" width="625" height="625"></canvas>
+        <script type="text/javascript" src="./index.js"></script>
+    </div>
 </body>
+
 </html>
